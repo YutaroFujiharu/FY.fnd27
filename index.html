@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&family=Silkscreen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Quiz Game</h1>
+    </div>
+    <div class="card">
+      <h2 id="question">Please select a difficulty level</h2>
+      <div class="choice" id="choice-buttons" style="display: none">
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+      </div>
+      <div id="feedback"></div>
+      <div class="level" id="level-buttons">
+        <button onclick="levelSelect('easy')">easy</button>
+        <button onclick="levelSelect('normal')">normal</button>
+        <button onclick="levelSelect('hard')">hard</button>
+        <button onclick="levelSelect('nightmare')">nightmare</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
