@@ -1,0 +1,159 @@
+/* リセットと共通設定 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* bodyの設定 */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10vh 10vw; /* 余白を追加 */
+  overflow: auto; /* スクロールを有効化 */
+}
+
+/* ヘッダーの設定 */
+.header {
+  width: 100%;
+  text-align: center;
+  padding: 2vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 3.5vw;
+  z-index: 10;
+  background-color: aliceblue;
+}
+
+.header h1 {
+  font-family: 'Silkscreen', sans-serif;
+  font-weight: 700;
+}
+
+/* カードの設定 */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-height: 70vh; /* カード全体の高さを制限 */
+  overflow-y: auto; /* カード全体をスクロール可能にする */
+  margin-top: 5vh;
+}
+
+/* 質問部分の設定 */
+.card h2 {
+  font-family: 'Silkscreen', sans-serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 1.5vw;
+  text-align: center;
+}
+
+#question {
+  font-size: 1.2vw;
+  text-align: center;
+  line-height: 1.5;
+  width: 90%;
+  max-height: 50vh; /* 質問部分の高さを制限 */
+  overflow-y: auto; /* 質問部分のスクロールを有効に */
+  white-space: pre-line; /* 改行を反映 */
+  padding-right: 5px;
+  word-wrap: break-word;
+  align-items: center;
+}
+
+/* レベルボタンの設定 */
+.level {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3vh;
+}
+
+#level-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+#level-buttons button {
+  margin: 1vh;
+  width: 10vw;
+  height: 7vh;
+  font-size: 1.5vw;
+  font-family: 'Silkscreen', sans-serif;
+  border-radius: 10px;
+  border: none;
+  background-color: lightgray;
+  transition: background-color 0.3s;
+}
+
+#level-buttons button:hover {
+  background-color: darkturquoise;
+  color: white;
+}
+
+/* 選択肢ボタンの設定 */
+.choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2vh 0;
+}
+
+#choice-buttons {
+  margin-top: 5vh;
+}
+
+#choice-buttons button {
+  margin: 1vh;
+  width: 50vw;
+  height: 8vh;
+  font-size: 2vw;
+  border-radius: 10px;
+  border: none;
+  background-color: lightgray;
+  transition: background-color 0.3s;
+}
+
+#choice-buttons button:hover {
+  background-color: darkturquoise;
+  color: white;
+}
+
+/* フィードバックの設定 */
+.card #feedback {
+  font-size: 20em;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.5s ease-in-out;
+  z-index: 1000;
+  opacity: 0;
+}
+
+.card #feedback.correct {
+  color: rgba(0, 128, 0, 0.7);
+  opacity: 1;
+}
+
+.card #feedback.incorrect {
+  color: rgba(255, 0, 0, 0.7);
+  opacity: 1;
+}
+
+.card #feedback.hide {
+  opacity: 0;
+}
